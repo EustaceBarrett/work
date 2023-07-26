@@ -1,0 +1,23 @@
+class ExpenseTracker:
+    def __init__(self):
+        self.expenses = []
+
+    def add_expense(self, item, cost):
+        self.expenses.append((item, cost))
+
+    def calculate_total_expenses(self):
+        total = 0
+        for item, cost in self.expenses:
+            total += cost
+        return total
+
+# Example Usage:
+tracker = ExpenseTracker()
+
+tracker.add_expense("Rent", 1000)
+tracker.add_expense("Groceries", 200)
+tracker.add_expense("Internet Bill", 50)
+
+total_expenses = tracker.calculate_total_expenses()
+
+print(f"Total monthly expenses: ${total_expenses}")
